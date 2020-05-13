@@ -33,8 +33,8 @@
 </head>
 <body id="bodyTag" class="vit">
    <div class="container" >
-    <h5 style="color: #1775c2; background-color: #c7e0f5;padding: 10px;">THERE ARE ONLY 5 QUESTIONS THAT WILL HELP YOU KNOW EXACTLY WHO YOU ARE</h5>
-    <h5>Instructions</h5>
+    <h5 style="color: #1775c2; background-color: #c7e0f5;padding: 10px;">Duy nhất 5 câu hỏi giúp biết chính xác BẠN thuộc tuýp người nào. BẠN sẽ vô cùng sửng sốt nhận ra những nét tính cách thực sự và năng lực tiềm ẩn của mình. </h5>
+    <h5>Hướng dẫn</h5>
     <p>Please place a number next to every phrase. No numbers should be used more than once for each statement(forced ranking.) 4 = Closest to discribing you, 3 = Next best discription of you, 2 = Next best, 1 = Least discriptive of you</p>
     <ul class="stepper horizontal" style="min-height: 600px;" >
        <!------------------------------ QUESTION 1 ------------------------------>
@@ -509,7 +509,12 @@
             .then(res => {
               console.log("then : ",res.data())
               if(res.data()) {
-                // window.location.replace('./result.html');
+                if(document.getElementById('bodyTag').classList.contains('vit')){
+                  window.location.replace('/result_vi.html');
+                }
+                else{
+                  window.location.replace('/result_en.html');
+                }
               }
             })
             .catch( err => console.log('err:', err))
