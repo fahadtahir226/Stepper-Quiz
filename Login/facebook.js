@@ -9,21 +9,21 @@ const facebookLogin = (event) => {
         var user = result.user;
         // ...
         // console.log(token, secret, user);
-        if(user.emailVerified){
+        // if(user.emailVerified){
             window.location.replace('../home.html');
-        }
-        else{
-            var user = firebase.auth().currentUser;
+        // }
+        // else{
+            // var user = firebase.auth().currentUser;
             
-            user.sendEmailVerification()
-            .then(function () {
-                alert('Verification email sent');
-                window.location.reload();
-            }).catch(function (error) {
-                // An error happened.
-                console.log(error);
-            });
-        }
+            // user.sendEmailVerification()
+            // .then(function () {
+            //     alert('Verification email sent');
+            //     window.location.reload();
+            // }).catch(function (error) {
+            //     // An error happened.
+            //     console.log(error);
+            // });
+        // }
             // window.location.replace('../home.html');
     }).catch(function (error) {
         // Handle Errors here.

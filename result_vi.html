@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<style>
+  .dropdown-content {
+    top: 100% !important;
+  }
+</style>
+  <title>Document</title>
+</head>
+<body>
+  <nav class="blue">
+    <div class="nav-wrapper container" >
+      <a href="#" class="brand-logo" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" >Kết quả kiểm tra </a>
+      <ul id="nav-mobile" class="right">
+        <li class="right" ><a class='dropdown-trigger' style="height: 64px !important" href='#' data-target='dropdown1'>
+          <img class="circle" style="padding: 2px;" width="60" height="60" id="profilepic" src="" alt="">
+        </a></li>
+        <li id="mail" class="hide-on-med-and-down" ></li>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content' >
+      <li><a href="#!" style="color: #2196f3" onclick="downloadpdf()"> <i class="material-icons"> cloud_download</i> Tải kết quả </a></li>
+      <li><a href="#!" style="color: #2196f3" onclick="window.location.replace('/result_en.html');"> <i class="material-icons"> language</i> Dịch sang tiếng Anh</a></li>
+      <li><a href="#!" style="color: #2196f3" onclick="SignOut(event)"><i class="material-icons"> lock_outline</i> Đăng xuất </a></li>
+    </ul>
+
+    <h6 style="color: #1775c2; background-color: #c7e0f5; padding: 10px;">
+      V-A-K-Ad Personality recognition test based on the sensory modalities - visual, auditory, kinesthetic and audio-digital - as used in Neuro-Linguistic Programming (NLP) 
+    </h6>
+    <table id="my-table" class="highlight striped" >
+      <tbody id="tableBody">
+        <tr>
+          <td rowspan="5" colspan="5" >
+            <div style="padding: 100px;text-align: center;">
+              <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col l3 offset-m4 m8 s12">
+      <img alt="" width="100%" src="./Images/logo_vi.png" />
+    </div>
+    <div class="col l6 offset-m4 m8 s12" >
+      <div id="chart_div"></div>
+    </div>
+  </div>
+</div>
+
+</script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script src="./Firebase/Firebase.js"></script> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script> -->
+
+
+  <script src="index.js"></script>
+  <script src="./Login/email.js"></script>
+  <script src="./Login/facebook.js" ></script>
+  <script src="./Login/google.js"></script>
+
+  <script src="https://unpkg.com/jspdf"></script>
+  <script src="https://unpkg.com/jspdf-autotable"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+  // Load the Visualization API library and the piechart library.
+  google.load('visualization', '1.0', {'packages':['corechart']});
+  google.setOnLoadCallback(drawChart);
+     // ... draw the chart...
+</script>
+  <script src="result.js" ></script>
+  <script>
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(elems, {constrainWidth: false});
+      function downloadpdf(){
+        var doc = new jsPDF();
+        doc.autoTable({ html: '#my-table' })
+        doc.save('Report.pdf')
+      }
+    </script>
+</body>
+</html>

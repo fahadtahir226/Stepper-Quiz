@@ -1,5 +1,5 @@
 const auth = firebase.auth();
-const db = firebase.firestore();
+// const db = firebase.firestore();
 
 
 // User login 
@@ -11,7 +11,21 @@ const login = (e) => {
 
     auth.signInWithEmailAndPassword(email, pass).then(res => {
         // console.log(res);
-        window.location.replace('../home.html');
+        // firebase.firestore().collection('Users').doc(user.uid)
+        // .get()
+        // .then(res => {
+            // console.log(res.data().lang);
+            // if(!res.data().lang) {
+                // var lang = askLanguague();
+                // console.log(lang);
+            // };
+            if(document.getElementById('bodyTag').classList.contains('vit')){
+                window.location.replace('/home_vi.html');
+              }
+              else{
+                window.location.replace('/home_en.html');
+              }
+        // })
     })
     .catch(err => {
         alert(`${err.message}`)
@@ -29,11 +43,11 @@ const Register = (e) => {
         auth.createUserWithEmailAndPassword(email, pass)
             .then(async (user) => {
                 alert(`Your Account Has Been Created Successfully !!`)
-                await db.collection('users').add({
-                    name,
-                    email
-                }).then(res => console.log(res, 'added'))
-                window.location.reload();
+                // await db.collection('users').add({
+                //     name,
+                //     email
+                // }).then(res => console.log(res, 'added'))
+                // window.location.reload();
             })
             .catch(err => {
                 alert(`${err.message}`)
@@ -53,3 +67,17 @@ const SignOut = (e) => {
 }
 
 
+// let askLanguague = () => {
+//    return swal("Please Select a languague?", {
+//       buttons: {
+//         english: {
+//           text: "ENGLISH",
+//           value: "en",
+//         },
+//         french: {
+//           text: "VIETNAMESE",
+//           value: "vi",
+//         },
+//       },
+//     })
+//  }

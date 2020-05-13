@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- Materialize -->
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/materialize-stepper@3.1.0/dist/css/mstepper.min.css">
+    <!-- JS -->
+    <script src="https://unpkg.com/materialize-stepper@3.1.0/dist/js/mstepper.min.js" > </script>
+
+    <style>
+      [type="radio"]:checked + span:after,
+      [type="radio"].with-gap:checked + span:before,
+      [type="radio"].with-gap:checked + span:after {
+        border: 2px solid #2196f3 ;
+      }
+      
+      [type="radio"]:checked + span:after,
+      [type="radio"].with-gap:checked + span:after {
+        background-color: #2196f3 ;
+      }
+      </style>
+</head>
+<body id="bodyTag" class="vit">
+   <div class="container" >
+    <h5 style="color: #1775c2; background-color: #c7e0f5;padding: 10px;">THERE ARE ONLY 5 QUESTIONS THAT WILL HELP YOU KNOW EXACTLY WHO YOU ARE</h5>
+    <h5>Instructions</h5>
+    <p>Please place a number next to every phrase. No numbers should be used more than once for each statement(forced ranking.) 4 = Closest to discribing you, 3 = Next best discription of you, 2 = Next best, 1 = Least discriptive of you</p>
+    <ul class="stepper horizontal" style="min-height: 600px;" >
+       <!------------------------------ QUESTION 1 ------------------------------>
+      <li class="step active">
+         <div class="step-title waves-effect">CÂU HỎI 1</div>
+         <div class="step-content">
+            <blockquote style="color:darkorange; font-weight: bold;font-size: 20px;">Bạn thường đưa ra quyết định quan trọng dựa trên: </blockquote>
+            <!-- <hr /> -->
+            <form class="row" action="#" >
+               <label class="col s2 m1 l1" >
+                 <input class="with-gap ques" name="q1a" value='1' type="radio" /><span>1</span>
+               </label>
+
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q1a" value='2' type="radio" /> <span>2</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q1a" value='3' type="radio" /> <span>3</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q1a" value='4' type="radio"/> <span>4</span>
+               </label>
+
+               <p class="col s12 m12 l12">Cảm tính</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q1b" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1b" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1b" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1b" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Những điều mà người khác nói </p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q1c" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1c" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1c" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1c" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Những điều mà (mình nhìn thấy) bạn cho là tốt nhất cho bản thân </p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q1d" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1d" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1d" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q1d" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Những thông tin, những dẫn chứng cụ thể </p> 
+            </form> 
+            <!-- <hr /> -->
+            <!-- Your step content goes here (like inputs or so) -->
+            <div class="step-actions">
+               <button class="waves-effect waves-dark btn next-step blue" data-feedback="checkValues" >KẾ TIẾP</button>
+            </div>
+         </div>
+      </li>
+      <!-------------------------------- QUESTION 2 -------------------------------->
+      <li class="step">
+         <div class="step-title waves-effect">CÂU HỎI 2</div>
+         <div class="step-content">
+            <blockquote style="color:darkorange; font-weight: bold;font-size: 20px;" >Trong các buổi tranh luận, bạn dễ bị tác động nhất bởi: </blockquote>
+            <!-- <hr /> -->
+            <form class="row" action="#" >
+               <label class="col s2 m1 l1" >
+                 <input class="with-gap ques" name="q2a" value='1' type="radio" /><span>1</span>
+               </label>
+
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q2a" value='2' type="radio" /> <span>2</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q2a" value='3' type="radio" /> <span>3</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q2a" value='4' type="radio"/> <span>4</span>
+               </label>
+
+               <p class="col s12 m12 l12">Cảm xúc của người khác </p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q2b" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2b" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2b" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2b" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Tính logic trong lời tranh luận của người khác </p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q2c" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2c" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2c" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2c" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Quan điểm của người khác (bạn có thể nhận biết được quan điểm của người khác) </p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q2d" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2d" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2d" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q2d" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Giọng điệu của người khác </p> 
+            </form> 
+            <!-- Your step content goes here (like inputs or so) -->
+            <div class="step-actions">
+               <button class="waves-effect waves-dark btn next-step blue" data-feedback="checkValues">KẾ TIẾP</button>
+               <button class="waves-effect waves-dark btn blue previous-step">TRỞ LẠI</button>
+            </div>
+         </div>
+      </li>
+      <!-------------------------------- QUESTION 3 -------------------------------->
+      <li class="step">
+         <div class="step-title waves-effect">CÂU HỎI 3</div>
+         <div class="step-content">
+            <blockquote style="color:darkorange; font-weight: bold;font-size: 20px;" >Điều gì bạn cảm thấy hài lòng nhất về bản thân:</blockquote>
+            <!-- <hr /> -->
+            <form class="row" action="#" >
+               <label class="col s2 m1 l1" >
+                 <input class="with-gap ques" name="q3a" value='1' type="radio" /><span>1</span>
+               </label>
+
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q3a" value='2' type="radio" /> <span>2</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q3a" value='3' type="radio" /> <span>3</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q3a" value='4' type="radio"/> <span>4</span>
+               </label>
+
+               <p class="col s12 m12 l12">Cách bạn ăn mặc </p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q3b" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3b" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3b" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3b" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Cách bạn chia sẻ cảm xúc</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q3c" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3c" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3c" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3c" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Cách bạn dùng từ</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q3d" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3d" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3d" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q3d" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Giọng nói của bạn</p> 
+            </form> 
+            <!-- Your step content goes here (like inputs or so) -->
+            <div class="step-actions">
+               <button class="waves-effect waves-dark btn blue next-step" data-feedback="checkValues">KẾ TIẾP</button>
+               <button class="waves-effect waves-dark btn blue previous-step">TRỞ LẠI</button>
+            </div>
+         </div>
+      </li>
+      <!-------------------------------- QUESTION 4 -------------------------------->
+      <li class="step">
+         <div class="step-title waves-effect">CÂU HỎI 4</div>
+         <div class="step-content">
+            <blockquote style="color:darkorange; font-weight: bold;font-size: 20px;" >Bạn thấy thật dễ dàng:</blockquote>
+            <!-- <hr /> -->
+            <form class="row" action="#" >
+               <label class="col s2 m1 l1" >
+                 <input class="with-gap ques" name="q4a" value='1' type="radio" /><span>1</span>
+               </label>
+
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q4a" value='2' type="radio" /> <span>2</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q4a" value='3' type="radio" /> <span>3</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q4a" value='4' type="radio"/> <span>4</span>
+               </label>
+
+               <p class="col s12 m12 l12">Chọn những đồ có sự kết hợp màu sắc hài hòa và bắt mắt nhất</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q4b" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4b" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4b" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4b" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Chọn những đồ đạc bạn cảm thấy thoải mái nhất</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q4c" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4c" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4c" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4c" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Chọn lựa những thông tin có giá trị nhất trong một chủ đề</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q4d" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4d" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4d" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q4d" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Điều chỉnh âm lượng và giai điệu của âm thanh sao cho hay nhất</p> 
+            </form> 
+            <!-- Your step content goes here (like inputs or so) -->
+            <div class="step-actions">
+               <button class="waves-effect waves-dark btn next-step blue" data-feedback="checkValues">KẾ TIẾP</button>
+               <button class="waves-effect waves-dark btn blue previous-step">TRỞ LẠI</button>
+            </div>
+         </div>
+      </li>
+      <!-------------------------------- QUESTION 5 -------------------------------->
+      <li class="step">
+         <div class="step-title waves-effect">CÂU HỎI 5</div>
+         <div class="step-content final">
+            <blockquote style="color:darkorange; font-weight: bold;font-size: 20px;" >Bạn rất nhạy cảm:</blockquote>
+            <!-- <hr /> -->
+            <form class="row" action="#" >
+               <label class="col s2 m1 l1" >
+                 <input class="with-gap ques" name="q5a" value='1' type="radio" /><span>1</span>
+               </label>
+
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q5a" value='2' type="radio" /> <span>2</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q5a" value='3' type="radio" /> <span>3</span>
+               </label>
+               
+               <label class="col s2 m1 l1">
+                 <input class="with-gap ques" name="q5a" value='4' type="radio"/> <span>4</span>
+               </label>
+
+               <p class="col s12 m12 l12">Bạn rất nhạy cảm với những âm thanh xung quanh</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q5b" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5b" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5b" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5b" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Bạn rất nhạy bén với các thông tin mới</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q5c" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5c" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5c" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5c" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Bạn rất nhạy cảm với những đồ bạn đang mặc</p>
+            </form>
+            <!-- <hr /> -->
+            <form class="row" action="#">
+               <label class="col s2 m1 l1" >
+                  <input class="with-gap ques" name="q5d" value='1' type="radio" /><span>1</span>
+                </label>
+ 
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5d" value='2' type="radio" /> <span>2</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5d" value='3' type="radio" /> <span>3</span>
+                </label>
+                
+                <label class="col s2 m1 l1">
+                  <input class="with-gap ques" name="q5d" value='4' type="radio"/> <span>4</span>
+                </label>
+               <p class="col s12 m12 l12">Bạn phản ứng nhanh với màu sắc và bề ngoài của sự vật</p> 
+            </form> 
+            <!-- Your step content goes here (like inputs or so) -->
+            <div class="step-actions">
+               <button class="waves-effect waves-dark blue btn next-step" type="submit" data-feedback="checkValues" >Gửi đi</button>
+               <button class="waves-effect waves-dark btn blue previous-step">TRỞ LẠI</button>
+            </div>
+         </div>
+      </li>
+
+   </ul>  
+</div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script src="./Firebase/Firebase.js"></script> 
+
+
+  <script src="index.js"></script>
+  <script src="./Login/email.js"></script>
+  <script src="./Login/facebook.js" ></script>
+  <script src="./Login/google.js"></script>
+
+  <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            console.log(user);
+            firebase.firestore().collection('Users').doc(user.uid)
+            .get()
+            .then(res => {
+              console.log("then : ",res.data())
+              if(res.data()) {
+                // window.location.replace('./result.html');
+              }
+            })
+            .catch( err => console.log('err:', err))
+            
+            // User is signed in.
+          } else {
+             window.location.replace('/');
+            // No user is signed in.
+          }
+         });
+      })
+      // if(undefined) alert("undefined is equal to undefined")
+
+   var stepper = document.querySelector('.stepper');
+   var stepperInstace = new MStepper(stepper)
+  </script>
+  <script src="home.js" ></script>
+</body>
+</html>
