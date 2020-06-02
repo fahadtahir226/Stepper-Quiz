@@ -23,10 +23,10 @@
 </style>
   <title>Document</title>
 </head>
-<body id="bodyTag" class="">
+<body id="bodyTag" class="vit" >
   <nav class="blue">
     <div class="nav-wrapper container" >
-      <a href="#" class="brand-logo" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" >Test Results</a>
+      <a href="#" class="brand-logo" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" >Kết quả kiểm tra </a>
       <ul id="nav-mobile" class="right">
         <li class="right" ><a class='dropdown-trigger' style="height: 64px !important" href='#' data-target='dropdown1'>
           <img class="circle" style="padding: 2px;" width="60" height="60" id="profilepic" src="" alt="">
@@ -40,13 +40,13 @@
     
     <!-- Dropdown Structure -->
     <ul id='dropdown1' class='dropdown-content' >
-      <li><a href="#!" style="color: #2196f3" onclick="downloadpdf()"> <i class="material-icons"> cloud_download</i> Download result</a></li>
-      <li><a href="#!" style="color: #2196f3" onclick="window.location.replace('/result_vi.html');"> <i class="material-icons"> language</i> Translate to Vietnamese</a></li>
-      <li><a href="#!" style="color: #2196f3" onclick="SignOut(event)"><i class="material-icons"> lock_outline</i>  Sign Out</a></li>
+      <li><a href="#!" style="color: #2196f3" onclick="downloadpdf()"> <i class="material-icons"> cloud_download</i> Tải kết quả </a></li>
+      <li><a href="#!" style="color: #2196f3" onclick="window.location.replace('/result_en.html');"> <i class="material-icons"> language</i> Dịch sang tiếng Anh</a></li>
+      <li><a href="#!" style="color: #2196f3" onclick="SignOut(event)"><i class="material-icons"> lock_outline</i> Đăng xuất </a></li>
     </ul>
 
     <h6 style="color: #1775c2; background-color: #c7e0f5; padding: 10px;">
-      V-A-K-Ad Personality recognition test based on the sensory modalities - visual, auditory, kinesthetic and audio-digital - as used in Neuro-Linguistic Programming (NLP) 
+      Trắc nghiệm nhận diện tính cách V-A-K-Ad theo phương pháp Khoa học NLP (Lập trình Ngôn ngữ Tư duy)      
     </h6>
     <table id="my-table" class="highlight striped" >
       <tbody id="tableBody">
@@ -74,10 +74,10 @@
 
 <div class="container-fluid" >
   <div class="row">
-    <div class="col l3 offset-m4 m8 s12">
-      <img alt="" src="./Images/logo.png" />
+    <div class="col offset-m2 s12 m8 l3">
+      <img alt="" width="100%" src="../Images/logo_vi.png" />
     </div>
-    <div class="col l6 offset-m4 m8 s12" >
+    <div class="col offset-m2 s12 m8 l6" >
       <div id="chart_div"></div>
     </div>
   </div>
@@ -88,16 +88,16 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-  <script src="./Firebase/Firebase.js"></script> 
+  <script src="../Firebase/Firebase.js"></script> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js" crossorigin="anonymous"></script>
   <!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script> -->
 
 
-  <script src="index.js"></script>
-  <script src="./Login/email.js"></script>
-  <script src="./Login/facebook.js" ></script>
-  <script src="./Login/google.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../Login/email.js"></script>
+  <script src="../Login/facebook.js" ></script>
+  <script src="../Login/google.js"></script>
 
   <script src="https://unpkg.com/jspdf"></script>
   <script src="https://unpkg.com/jspdf-autotable"></script>
@@ -109,14 +109,14 @@
   google.setOnLoadCallback(drawChart);
      // ... draw the chart...
 </script>
-  <script src="result.js" ></script>
+  <script src="../js/result.js" ></script>
   <script>
     var elems = document.querySelectorAll('.dropdown-trigger');
     M.Dropdown.init(elems, {constrainWidth: false});
       function downloadpdf(){
         var doc = new jsPDF();
         doc.autoTable({ html: '#my-table' })
-        doc.save('table.pdf')
+        doc.save('Report.pdf')
       }
     </script>
 </body>

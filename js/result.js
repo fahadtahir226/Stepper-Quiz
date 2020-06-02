@@ -57,7 +57,7 @@
         .catch( err => console.log('err:', err))
         // User is signed in.
       } else {
-         window.location.replace('/');
+         window.location.replace('login.html');
         // No user is signed in.
       }
      });
@@ -72,7 +72,7 @@
         ['Thính giác-kỹ thuật số (Ad)', Data.Ad_value],
         ['Động học (K)',  Data.K_value],
         ['Thính giác (A)',  Data.A_value],
-        ['Visual (V)',  Data.V_value]
+        ['Trực quan (V)',  Data.V_value]
       ]);
     }
     else{
@@ -82,7 +82,7 @@
         ['Auditory-digital (Ad)', Data.Ad_value],
         ['Kinesthetic (K)',  Data.K_value],
         ['Auditory (A)',  Data.A_value],
-        ['Trực quan (V)',  Data.V_value]
+        ['Visual (V)',  Data.V_value]
       ]);
     }
 

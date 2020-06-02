@@ -19,12 +19,12 @@ const login = (e) => {
                 // var lang = askLanguague();
                 // console.log(lang);
             // };
-            if(document.getElementById('bodyTag').classList.contains('vit')){
-                window.location.replace('/home_vi.html');
-              }
-              else{
-                window.location.replace('/home_en.html');
-              }
+            // if(document.getElementById('bodyTag').classList.contains('vit')){
+                window.location.replace('home.html');
+            //   }
+            //   else{
+            //     window.location.replace('/home_en.html');
+            //   }
         // })
     })
     .catch(err => {
@@ -62,7 +62,7 @@ const SignOut = (e) => {
     e.preventDefault();
     auth.signOut().then(res => {
         alert("You're Logged Out Successfully");
-        window.location.replace("../index.html");
+        window.location.replace("login.html");
     }).catch(err => alert(err.message))
 }
 

@@ -85,12 +85,12 @@ function submitToFirebase(checked_buttons) {
    uid = auth.currentUser.uid;
    firebase.firestore().collection("Users").doc(auth.currentUser.uid).set(userData).then(() => {
       M.toast({html: 'Quiz Submitted Successfully!',completeCallback: () => {
-         if(document.getElementById('bodyTag').classList.contains('vit')){
-            window.location.replace('/result_vi.html');
-          }
-          else{
-            window.location.replace('/result_en.html');
-          }
+         // if(document.getElementById('bodyTag').classList.contains('vit')){
+            window.location.replace('result.html');
+         //  }
+         //  else{
+            // window.location.replace('/result_en.html');
+         //  }
          }
       })
 

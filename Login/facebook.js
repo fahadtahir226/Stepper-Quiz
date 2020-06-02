@@ -10,7 +10,12 @@ const facebookLogin = (event) => {
         // ...
         // console.log(token, secret, user);
         // if(user.emailVerified){
-            window.location.replace('../home.html');
+            // if(document.getElementById('bodyTag').classList.contains('vit')){
+                window.location.replace('home.html');
+            //   }
+            //   else{
+            //     window.location.replace('/home_en.html');
+            //   }
         // }
         // else{
             // var user = firebase.auth().currentUser;

@@ -491,42 +491,42 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-  <script src="./Firebase/Firebase.js"></script> 
+  <script src="../Firebase/Firebase.js"></script> 
 
 
-  <script src="index.js"></script>
-  <script src="./Login/email.js"></script>
-  <script src="./Login/facebook.js" ></script>
-  <script src="./Login/google.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../Login/email.js"></script>
+  <script src="../Login/facebook.js" ></script>
+  <script src="../Login/google.js"></script>
 
   <script>
       window.addEventListener('DOMContentLoaded', () => {
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             console.log(user);
-            firebase.firestore().collection('Users').doc(user.uid)
-            .get()
-            .then(res => {
-              console.log("then : ",res.data())
-              if(res.data()) {
-                if(document.getElementById('bodyTag').classList.contains('vit')){
-                  window.location.replace('/result_vi.html');
-                }
-                else{
-                  window.location.replace('/result_en.html');
-                }
-              }
-            })
-            .catch( err => console.log('err:', err))
+            // firebase.firestore().collection('Users').doc(user.uid)
+            // .get()
+            // .then(res => {
+            //   console.log("then : ",res.data())
+            //   if(res.data()) {
+            //     if(document.getElementById('bodyTag').classList.contains('vit')){
+            //       window.location.replace('/result_vi.html');
+            //     }
+            //     else{
+            //       window.location.replace('/result_en.html');
+            //     }
+            //   }
+            // })
+            // .catch( err => console.log('err:', err))
             
             // User is signed in.
           } else {
-            if(document.getElementById('bodyTag').classList.contains('vit')){
-                  window.location.replace('/index_vi.html');
-                }
-                else{
-                  window.location.replace('/');
-                }
+            // if(document.getElementById('bodyTag').classList.contains('vit')){
+                  // window.location.replace('/index_vi.html');
+                // }
+                // else{
+                  // window.location.replace('/');
+                // }
             // No user is signed in.
           }
          });
@@ -536,6 +536,6 @@
    var stepper = document.querySelector('.stepper');
    var stepperInstace = new MStepper(stepper)
   </script>
-  <script src="home.js" ></script>
+  <script src="../js/home.js" ></script>
 </body>
 </html>

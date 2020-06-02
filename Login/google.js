@@ -8,13 +8,13 @@ const googleLogin = (event) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         // The signed-in user info.
-        user = result.user;
-        if(document.getElementById('bodyTag').classList.contains('vit')){
-          window.location.replace('/home_vi.html');
-        }
-        else{
-          window.location.replace('/home_en.html');
-        }
+        // user = result.user;
+        // if(document.getElementById('bodyTag').classList.contains('vit')){
+          window.location.replace('home.html');
+        // }
+        // else{
+        //   window.location.replace('/home_en.html');
+        // }
         // ...
         // console.log(token, user);
         // firebase.firestore().collection('lang').doc(user.uid)

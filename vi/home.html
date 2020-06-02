@@ -33,9 +33,9 @@
 </head>
 <body id="bodyTag" class="vit">
    <div class="container" >
-    <h5 style="color: #1775c2; background-color: #c7e0f5;padding: 10px;">Duy nhất 5 câu hỏi giúp biết chính xác BẠN thuộc tuýp người nào. BẠN sẽ vô cùng sửng sốt nhận ra những nét tính cách thực sự và năng lực tiềm ẩn của mình. </h5>
+    <h5 style="color: #1775c2; background-color: #c7e0f5;padding: 10px;">Duy nhất 5 câu hỏi giúp biết chính xác BẠN thuộc tuýp người nào. </h5>
     <h5>Hướng dẫn</h5>
-    <p>Please place a number next to every phrase. No numbers should be used more than once for each statement(forced ranking.) 4 = Closest to discribing you, 3 = Next best discription of you, 2 = Next best, 1 = Least discriptive of you</p>
+    <p>Bạn cần chọn 1 điểm số phía trước mỗi câu trả lời (không chọn trùng và bỏ trống). 4=Đúng nhất, 3=Rất đúng, 2=Đúng, 1=Ít đúng nhất.</p>
     <ul class="stepper horizontal" style="min-height: 600px;" >
        <!------------------------------ QUESTION 1 ------------------------------>
       <li class="step active">
@@ -491,37 +491,37 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-  <script src="./Firebase/Firebase.js"></script> 
+  <script src="../Firebase/Firebase.js"></script> 
 
 
-  <script src="index.js"></script>
-  <script src="./Login/email.js"></script>
-  <script src="./Login/facebook.js" ></script>
-  <script src="./Login/google.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../Login/email.js"></script>
+  <script src="../Login/facebook.js" ></script>
+  <script src="../Login/google.js"></script>
 
   <script>
       window.addEventListener('DOMContentLoaded', () => {
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             console.log(user);
-            firebase.firestore().collection('Users').doc(user.uid)
-            .get()
-            .then(res => {
-              console.log("then : ",res.data())
-              if(res.data()) {
-                if(document.getElementById('bodyTag').classList.contains('vit')){
-                  window.location.replace('/result_vi.html');
-                }
-                else{
-                  window.location.replace('/result_en.html');
-                }
-              }
-            })
-            .catch( err => console.log('err:', err))
+            // firebase.firestore().collection('Users').doc(user.uid)
+            // .get()
+            // .then(res => {
+            //   console.log("then : ",res.data())
+            //   if(res.data()) {
+            //     if(document.getElementById('bodyTag').classList.contains('vit')){
+            //       window.location.replace('/result_vi.html');
+            //     }
+            //     else{
+            //       window.location.replace('/result_en.html');
+            //     }
+            //   }
+            // })
+            // .catch( err => console.log('err:', err))
             
             // User is signed in.
           } else {
-             window.location.replace('/');
+             window.location.replace('login.html');
             // No user is signed in.
           }
          });
@@ -531,6 +531,6 @@
    var stepper = document.querySelector('.stepper');
    var stepperInstace = new MStepper(stepper)
   </script>
-  <script src="home.js" ></script>
+  <script src="../js/home.js" ></script>
 </body>
 </html>
